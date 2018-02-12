@@ -139,7 +139,7 @@ export var getTrackLeft = function (spec) {
           }
       }
       if (spec.infinite === false && targetLeft < max) {
-        targetLeft = max;
+        targetLeft = targetLeft === -0 ? 0 : max;
       }
   }
 
